@@ -80,34 +80,66 @@
         </a>
       </li>
     </ul>
+    <mu-container>
+      <mu-list class="badge-list-wrap">
+        <mu-list-item>
+          <mu-list-item-content>
+            <mu-list-item-title>Menu Item 1</mu-list-item-title>
+          </mu-list-item-content>
+          <mu-list-item-action>
+            <mu-badge content="12"></mu-badge>
+          </mu-list-item-action>
+        </mu-list-item>
+        <mu-list-item>
+          <mu-list-item-content>
+            <mu-list-item-title>Menu Item 2</mu-list-item-title>
+          </mu-list-item-content>
+          <mu-list-item-action>
+            <mu-badge content="old" color="primary"></mu-badge>
+          </mu-list-item-action>
+        </mu-list-item>
+        <mu-list-item>
+          <mu-list-item-content>
+            <mu-list-item-title>Menu Item 3</mu-list-item-title>
+          </mu-list-item-content>
+          <mu-list-item-action>
+            <mu-badge content="news" color="secondary"></mu-badge>
+          </mu-list-item-action>
+        </mu-list-item>
+      </mu-list>
+    </mu-container>
+
   </div>
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+  export default {
+    name: 'HelloWorld',
+    data() {
+      return {
+        msg: 'Welcome to Your Vue.js App'
+      }
     }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+  h1, h2 {
+    font-weight: normal;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  a {
+    color: #42b983;
+  }
 </style>
