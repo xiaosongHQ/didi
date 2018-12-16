@@ -65,7 +65,7 @@
   .login_box{
     width: 17.44rem;
     height: 27.38rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     border: 0.06rem solid #bbbbbb;
     border-radius: 0.63rem;
     box-shadow: 0 0 1.25rem #aaaaaa;

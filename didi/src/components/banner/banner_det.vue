@@ -8,14 +8,9 @@
 
 <script>
     export default {
-        name: "banner_det",
+      name: "banner_det",
       data () {
-        bannerUrl: [
-          '../../../static/aui/image/demo1.png',
-          carouselImg2,
-          carouselImg3,
-          carouselImg4
-        ]
+
       }
     }
 </script>
