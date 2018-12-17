@@ -56,6 +56,7 @@
       },
     },
     created(){
+<<<<<<< HEAD
       this.$http.post("http://87ju84.natappfree.cc/check-car/app/register", {"username":"测试2","password":"123456","mobile":"13511804426"}).then(function(res){
         // 响应成功回调
         var data = res.body;
@@ -63,6 +64,9 @@
       }, function(res){
       // 响应错误回调
       });
+=======
+
+>>>>>>> e9fe17e5ac8cc9422340395bed8d563be544e5eb
     }
   }
 </script>
@@ -70,6 +74,7 @@
 <style scoped>
   .login h2{
     margin: 3rem auto;
+    text-align: center;
   }
   .login_box{
     width: 17.44rem;
