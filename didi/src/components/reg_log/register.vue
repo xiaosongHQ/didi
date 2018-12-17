@@ -4,7 +4,7 @@
     <h2>注册</h2>
     <mu-container class="login_box">
       <mu-paper class="demo-paper headpic" circle :z-depth="0"></mu-paper>
-      <mu-form :model="form" class="mu-demo-form" label-position="left" label-width="80">
+      <mu-form class="mu-demo-form" ref="form" :model="validateForm" label-position="left" label-width="80">
         <mu-form-item label="用户名" help-text="" prop="username" :rules="usernameRules">
           <mu-text-field v-model="validateForm.username" prop="username"></mu-text-field>
         </mu-form-item>
@@ -29,14 +29,15 @@
 <script>
   export default {
     name: "register",
-    form: {
-      input: ''
-    },
     data() {
       return {
         usernameRules: [
           {validate: (val) => !!val, message: '必须填写用户名'},
           {validate: (val) => val.length >= 3, message: '用户名长度大于3'}
+        ],
+        emailRules: [
+          {validate: (val) => !!val, message: '必须填写邮箱'}
+          // {validate: (val) => val.length >= 3 && val.length <= 10, message: '密码长度大于3小于10'}
         ],
         passwordRules: [
           {validate: (val) => !!val, message: '必须填写密码'},
@@ -44,7 +45,8 @@
         ],
         validateForm: {
           username: '',
-          password: ''
+          password: '',
+          email: ''
         }
       }
     },
