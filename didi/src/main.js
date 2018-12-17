@@ -5,8 +5,10 @@ import App from './App'
 import router from './router'
 import 'muse-ui/dist/muse-ui.css'
 import './assets/material-icons.css'
-Vue.config.productionTip = false
+import Resource from 'vue-resource'
 
+Vue.config.productionTip = false
+Vue.use(Resource)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
