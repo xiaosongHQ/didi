@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import 'muse-ui/dist/muse-ui.css'
-import './assets/material-icons.css'
+// import './assets/material-icons.css'
 import Resource from 'vue-resource'
 
 
@@ -12,7 +12,7 @@ import Toast from 'muse-ui-toast';
 Vue.use(Toast);
 
 Vue.config.productionTip = false
-Vue.use(Resource) 
+Vue.use(Resource)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

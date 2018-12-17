@@ -59,11 +59,11 @@ module.exports = {
       },
       {
 
-        test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
+		test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
 
-        loader: 'file-loader'
+		loader: 'file-loader'
 
-      },
+		},
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: 'url-loader',

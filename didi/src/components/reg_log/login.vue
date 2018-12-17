@@ -5,9 +5,6 @@
     <mu-container class="login_box">
         <mu-paper class="demo-paper headpic" circle :z-depth="0"></mu-paper>
         <mu-form :model="form" class="mu-demo-form" label-position="left" label-width="80">
-          <!--<mu-form-item label="用户名" help-text="" prop="username" :rules="usernameRules">
-            <mu-text-field v-model="validateForm.username" prop="username"></mu-text-field>
-          </mu-form-item>-->
           <mu-form-item label="邮箱" prop="email" :rules="emailRules">
             <mu-text-field v-model="validateForm.email" prop="email"></mu-text-field>
           </mu-form-item>
