@@ -8,7 +8,7 @@ import './assets/material-icons.css'
 import Resource from 'vue-resource'
 
 Vue.config.productionTip = false
-Vue.use(Resource)
+Vue.use(Resource) 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
