@@ -67,7 +67,6 @@
       <p>浙江车检通网络科技有限公司</p>
     </div>
   </div>
-  <!--<foot-nav></foot-nav>-->
 </template>
 
 <script>

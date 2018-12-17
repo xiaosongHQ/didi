@@ -23,7 +23,7 @@
           </mu-form-item>
         </mu-form>
       </mu-container>
-    <router-link :to="{name:'register'}">
+    <router-link class="toReg" :to="{name:'register'}">
       新用户？点击这里注册
     </router-link>
   </div>
@@ -65,6 +65,7 @@
 <style scoped>
   .login h2{
     margin: 3rem auto;
+    text-align: center;
   }
   .login_box{
     width: 17.44rem;
@@ -82,6 +83,10 @@
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
+  }
+  .toReg{
+    display: inline-block;
+    text-align: center;
   }
 </style>
 

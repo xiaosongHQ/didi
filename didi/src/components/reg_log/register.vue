@@ -54,6 +54,23 @@
           console.log('form valid: ', result)
         });
       },
+    },
+    created(){
+      // 点击对应的新闻 显示对应的详情
+      this.$http.jsonp('http://8staqr.natappfree.cc/check-car/app/register', [
+        {
+          username:'测试',
+          mobile:18539442736,
+          password:123456
+        }
+      ],
+        ).then((res) => {
+        console.log(res);
+        // 响应成功回调
+      }, (res) => {
+        console.log(res);
+        // 响应错误回调
+      });
     }
   }
 </script>
@@ -61,6 +78,7 @@
 <style scoped>
   .login h2{
     margin: 3rem auto;
+    text-align: center;
   }
   .login_box{
     width: 17.44rem;
