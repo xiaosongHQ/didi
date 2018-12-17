@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "muse-ui-toast": "^0.3.0",
+    "vue": "^2.5.21"
+  }
+}

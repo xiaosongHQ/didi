@@ -7,6 +7,10 @@ import 'muse-ui/dist/muse-ui.css'
 import './assets/material-icons.css'
 import Resource from 'vue-resource'
 
+
+import Toast from 'muse-ui-toast';
+Vue.use(Toast);
+
 Vue.config.productionTip = false
 Vue.use(Resource) 
 /* eslint-disable no-new */
@@ -14,5 +18,6 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  
 })

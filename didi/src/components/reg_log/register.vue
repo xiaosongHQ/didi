@@ -44,27 +44,49 @@
           {validate: (val) => val.length >= 3 && val.length <= 10, message: '密码长度大于3小于10'}
         ],
         validateForm: {
-          username: '',
-          password: '',
-          email: ''
+          username: "",
+          password: "",
+          email: ""
         }
       }
     },
     methods: {
+    toast () {
+      this.$toast.message('hello world');
+      this.$toast.success('hello world');
+      this.$toast.info('hello world');
+      this.$toast.warning('hello world');
+      this.$toast.error('hello world');
+    },
       submit () {
         this.$refs.form.validate().then((result) => {
           console.log('form valid: ', result)
         });
-      },
-    },
-    created(){
-      this.$http.post("http://87ju84.natappfree.cc/check-car/app/register", {"username":"测试2","password":"123456","mobile":"13511804426"}).then(function(res){
+         this.$http.post("http://87ju84.natappfree.cc/check-car/app/register", {"username":this.validateForm.username,"password":this.validateForm.password,"mobile":this.validateForm.email}).then(function(res){
         // 响应成功回调
         var data = res.body;
-        console.log(data)
+          if(data.code==200){
+              alert('注册成功')
+              // $toast.config({"position": "center","time": 2000})
+              this.$toast.success('注册成功')  //这个消息提示我觉得可能提示了 但是被tabar挡住的  我测试的时候看见hello word了的
+              // Toast.error('hello world');  
+              // this.$router.push({ path:"/login"})   //注册成功跳转登录  路由有问题  可能没有配置
+          }else{
+               this.$toast.success('注册失败')
+          }
       }, function(res){
       // 响应错误回调
       });
+      },
+    },
+    created(){
+      // this.$http.post("http://87ju84.natappfree.cc/check-car/app/register", {"username":"测试2","password":"123456","mobile":"13511804426"}).then(function(res){
+      //   // 响应成功回调
+      //   var data = res.body;
+      //   console.log(data)
+      // }, function(res){
+      // // 响应错误回调
+      // });
     }
   }
 </script>
