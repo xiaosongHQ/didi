@@ -67,10 +67,11 @@
       <p>浙江车检通网络科技有限公司</p>
     </div>
   </div>
-
+  <!--<foot-nav></foot-nav>-->
 </template>
 
 <script>
+  import footNav from '../components/common/foot'
   export default {
     name: "index",
     data() {
@@ -134,9 +135,11 @@
     border-radius: 0.2rem;
   }
   .appointment{
+    display: block;
+    margin-bottom: 15px;
     padding: 5px;
     width: 100%;
-    box-shadow: 0 0 0.5rem 0 #00bcd4;
+    box-shadow: 0 0 0.2rem 0 #00bcd4;
   }
   .need img{
     vertical-align: middle;
