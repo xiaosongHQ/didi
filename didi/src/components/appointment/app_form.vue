@@ -22,9 +22,9 @@
       <mu-form-item prop="input" label="联系手机">
         <mu-text-field v-model="form.call"></mu-text-field>
       </mu-form-item>
-      <mu-form-item prop="input" label="验证码">
+      <!--<mu-form-item prop="input" label="验证码">
         <mu-text-field v-model="form.smscode"></mu-text-field>
-      </mu-form-item>
+      </mu-form-item>-->
       <mu-button class="nextBtn" @click="to_next" color="primary">下一步</mu-button>
     </mu-form>
     <div class="suporse">
@@ -57,8 +57,8 @@
       },
       methods: {
         to_next(){
-          this.$router.push({name:'app_msg_s'})
-          this.$http.post("http://87ju84.natappfree.cc/check-car/app/check/user/addUserCar", {
+          // this.$router.push({name:'app_msg_s'})
+          this.$http.post("http://qvddk3.natappfree.cc/check-car/app/check/user/addUserCar", {
             "carType": this.form.carType,
             "carId": this.form.carId,
             "engineId": this.form.engineId,

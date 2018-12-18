@@ -21,10 +21,22 @@
         </div>
         <div class="main_cell_body">
           <router-link class="appointment" :to="{name:'app_msg'}">
-            <span></span><span>在线预约 <p>一键预约年检，快速办理</p></span>
+            <div class="head_pic">
+              <img src="../../static/images/car.png" alt="">
+            </div>
+            <div class="pic_msg">
+              <p>在线预约 </p>
+              <p>一键预约年检，快速办理</p>
+            </div>
           </router-link>
           <router-link class="appointment" :to="{name:'register'}">
-            <img src="" alt=""><span>在线预约 <p>一键预约年检，快速办理</p></span>
+            <div class="head_pic">
+              <img src="../../static/images/people.png" alt="">
+            </div>
+            <div class="pic_msg">
+              <p>代驾预约 </p>
+              <p>代驾年检，每人一对一办理</p>
+            </div>
           </router-link>
         </div>
       </div>
@@ -98,7 +110,16 @@
   .main{
     padding-bottom: 56px;
   }
-
+  .head_pic{
+    float: left;
+    margin: 15px;
+    width: 60px;
+    height: 60px;
+  }
+  .head_pic img{
+    width: 100%;
+    height: 100%;
+  }
   .top_pic {
     width: 100vw;
     height: 12.5rem;
@@ -116,7 +137,7 @@
   }
   .main_cell_title{
     line-height: 40px;
-    background-color: #9e9e9e;
+    background-color: #fff;
   }
   .main_cell_title span{
     border-left: 2px solid #00bbd4;
@@ -150,7 +171,10 @@
     margin-bottom: 15px;
     padding: 5px;
     width: 100%;
-    box-shadow: 0 0 0.2rem 0 #00bcd4;
+    box-shadow: 0 0 0.3rem 0 #05d4be;
+  }
+  .appointment p{
+    color: #444444;
   }
   .need img{
     vertical-align: middle;
