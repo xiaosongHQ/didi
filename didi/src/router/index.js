@@ -4,17 +4,22 @@ import VueResource from 'vue-resource'
 import index from '../components/index'
 import register from '../components/reg_log/register'
 import login from '../components/reg_log/login'
+import server_process from '../components/server_process'
+import order from '../components/order/order'
 import app_msg from '../components/appointment/app_msg'
-import footNav from '../components/common/foot'
+import app_msg_s from '../components/appointment/app_msg_s'
 import steper from '../components/common/steper'
 
+import Toast from 'muse-ui-toast';
 
 import MuseUI from 'muse-ui'
-import 'muse-ui/dist/muse-ui.css'
-
-const baseUrl = 'http://8staqr.natappfree.cc'
 
 Vue.use(MuseUI)
+
+import 'muse-ui/dist/muse-ui.css';
+
+// const baseUrl = 'http://8staqr.natappfree.cc'
+Vue.use(Toast);
 Vue.use(Router)
 Vue.use(VueResource)
 
@@ -24,8 +29,7 @@ Axios.defaults.baseURL = 'http://8staqr.natappfree.cc/'
 Vue.prototype.$ajax = Axios
 
 //全局组件
-Vue.component('footNav',footNav)
-Vue.component('steper',steper)
+
 
 
 export default new Router({
@@ -50,6 +54,26 @@ export default new Router({
       path: '/app_msg',
       name: 'app_msg',
       component: app_msg
+    },
+    {
+      path: '/steper',
+      name: 'steper',
+      component: steper
+    },
+    {
+      path: '/app_msg_s',
+      name: 'app_msg_s',
+      component: app_msg_s
+    },
+    {
+      path: '/order',
+      name: 'order',
+      component: order
+    },
+    {
+      path: '/server_process',
+      name: 'server_process',
+      component: server_process
     }
   ]
 })

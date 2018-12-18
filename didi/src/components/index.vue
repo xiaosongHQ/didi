@@ -20,7 +20,7 @@
           <span>车检服务</span>
         </div>
         <div class="main_cell_body">
-          <router-link class="appointment" :to="{name:'register'}">
+          <router-link class="appointment" :to="{name:'app_msg'}">
             <span></span><span>在线预约 <p>一键预约年检，快速办理</p></span>
           </router-link>
           <router-link class="appointment" :to="{name:'register'}">
@@ -66,6 +66,7 @@
       <p>客服电话:<span>&nbsp;&nbsp;400-030-1530</span></p>
       <p>浙江车检通网络科技有限公司</p>
     </div>
+    <foot-nav></foot-nav>
   </div>
 </template>
 
@@ -73,6 +74,9 @@
   import footNav from '../components/common/foot'
   export default {
     name: "index",
+    components: {
+      footNav
+    },
     data() {
       return {
         banner: 'banner',

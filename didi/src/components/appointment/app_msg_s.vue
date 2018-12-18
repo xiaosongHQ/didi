@@ -1,18 +1,18 @@
 <template>
-  <div class="f_app">
+  <div class="app_msg_s">
     <steper></steper>
-    <f_form></f_form>
+    <s_form></s_form>
   </div>
 </template>
 
 <script>
   import steper from '../common/steper'
-  import f_form from '../appointment/app_form'
+  import s_form from '../appointment/app_form_go'
     export default {
-        name: "app_msg",
+        name: "app_msg_s",
       components:{
-          steper,
-          f_form
+        steper,
+        s_form
       }
     }
 </script>
