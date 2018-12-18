@@ -57,8 +57,9 @@
       },
       methods: {
         to_next(){
-          // this.$router.push({name:'app_msg_s'})
-          this.$http.post("http://qvddk3.natappfree.cc/check-car/app/check/user/addUserCar", {
+          this.$router.push({name:'app_msg_s'})
+          let token = sessionStorage.getItem('USER');
+          this.$http.post("http://qvddk3.natappfree.cc/check-car/app/check/user/addUserCar",{
             "carType": this.form.carType,
             "carId": this.form.carId,
             "engineId": this.form.engineId,
