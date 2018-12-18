@@ -84,11 +84,9 @@
       }
     },
     created() {
-      // console.log(typeof sessionStorage.getItem('USER'));
       let userInfo = JSON.parse(sessionStorage.getItem('USER'))
-      // userInfo = ''
-      if (userInfo.token) {
-        // alert(1)
+      if (userInfo.token != ''&&userInfo.token != undefined) {
+        //认证登录状态
       }else {
         this.$router.push({name: 'login'})
       }

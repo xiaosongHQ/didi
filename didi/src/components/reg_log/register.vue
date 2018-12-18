@@ -55,27 +55,37 @@
           mobile: ""
         },
         openSimple: false,
-        msg:''
+        msg:'',
+        sign: false
       }
     },
     methods: {
       submit () {
         this.$refs.form.validate().then((result) => {
           if(result){
-            this.$http.post("http://87ju84.natappfree.cc/check-car/app/register", {"username":this.validateForm.username,"password":this.validateForm.password,"mobile":this.validateForm.mobile}).then(function(res){
+            this.$http.post("http://qvddk3.natappfree.cc/check-car/app/register", {"username":this.validateForm.username,"password":this.validateForm.password,"mobile":this.validateForm.mobile}).then(function(res){
               // 响应成功回调
-              if(res.code === 200){
+              if(res.body.code === 200){
                 this.openSimple = true
                 this.msg = '注册成功'
-                this.$router.push({name:'login'})
-              }else{
+                this.sign = true
 
+              }else{
+                this.openSimple = true
+                this.msg = res.body.msg
+                this.sign = false
               }
             }, function(res){
               // 响应错误回调
             });
           }
         });
+      },
+      closeSimpleDialog () {
+        this.openSimple = false;
+        if (this.sign) {
+          this.$router.push({name:'login'})
+        }
       }
     },
     created(){

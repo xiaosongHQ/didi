@@ -52,25 +52,27 @@
     },
     methods: {
       submit() {
-        let params = {mobile:18241033575,password:123456,token:'4556'};
-        sessionStorage.setItem('USER',JSON.stringify(params));
+        // let params = {mobile:18241033575,password:123456,token:'4556'};
+        // sessionStorage.setItem('USER',JSON.stringify(params));
         this.$refs.form.validate().then((result) => {
           if (result) {
-            this.$http.post("http://87ju84.natappfree.cc/check-car/app/login", {
+            this.$http.post("http://qvddk3.natappfree.cc/check-car/app/login", {
               "mobile": this.validateForm.mobile,
               "password": this.validateForm.password
             })
               .then(function (res) {
                 // 响应成功回调
-                if (res.code === 200) {
-                  sessionStorage.setItem('USER',res.token)
+                if (res.body.code === 200) {
+                  let params = {};
+                  params.expire = res.body.expire;
+                  params.token = res.body.token;
+                  sessionStorage.setItem('USER',JSON.stringify(params));
                   //保存session
                   //跳转到首页
                   this.$router.push({name: 'index'})
-
-                }else if (res.code === 500) {
+                }else if (res.body.code === 500) {
                   this.openSimple = true
-                  this.msg = res.msg
+                  this.msg = res.body.msg
                   // this.openSimple = true;
                 }
               })
