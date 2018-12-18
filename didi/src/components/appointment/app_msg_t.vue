@@ -8,6 +8,7 @@
       <div class="upload_pic">
 
       </div>
+      <input type="file">
       <mu-button class="nextBtn" :to="({name:'index'})" color="primary">完成</mu-button>
     </div>
 </template>
