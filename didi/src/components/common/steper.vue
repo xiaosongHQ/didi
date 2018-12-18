@@ -32,6 +32,18 @@
         activeStep: 0
       };
     },
+    created(){
+      if (this.$route.path === '/app_msg_s') {
+        this.activeStep = 1
+      }else if (this.$route.path === '/app_msg_t') {
+        this.activeStep = 2
+      }else {
+        this.activeStep = 0
+      }
+
+
+      // console.log(this.$route.path);
+    },
     computed: {
 
     },

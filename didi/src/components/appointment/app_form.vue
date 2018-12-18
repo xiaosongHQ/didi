@@ -6,7 +6,7 @@
     <mu-form :model="form" class="mu-demo-form" :label-position="labelPosition" label-width="100">
       <mu-form-item prop="select" label="车辆类型">
         <mu-select v-model="form.carType">
-          <mu-option v-for="option,index in options" :key="option" :label="option" :value="option"></mu-option>
+          <mu-option v-for="(index,item) in options" :key="index" :label="index" :value="item"></mu-option>
         </mu-select>
       </mu-form-item>
       <mu-form-item prop="input" label="车辆号牌">
@@ -25,7 +25,11 @@
       <mu-form-item prop="input" label="验证码">
         <mu-text-field v-model="form.smscode"></mu-text-field>
       </mu-form-item>
+      <mu-button class="nextBtn" @click="to_next" color="primary">下一步</mu-button>
     </mu-form>
+    <div class="suporse">
+      技术支持：北京道火自然科技
+    </div>
   </mu-container>
 </template>
 
@@ -34,18 +38,35 @@
         name: "app_form",
       data () {
         return {
-          options: [
-            '微型车', '小型车', '中型车', '大型车'
-          ],
+          options: {
+            1:'微型车',
+            2:'小型车',
+            3:'中型车',
+            4:'大型车'
+          },
           labelPosition: 'left',
           form: {
             carType: '',
             smscode:'',
-            carId: '',
-            engineId: '',
-            registerTime: '',
-            call: ''
+            carId: '京B.2B945',
+            engineId: 'CA6102',
+            registerTime: '2018-12-16',
+            call: '18300612017'
           }
+        }
+      },
+      methods: {
+        to_next(){
+          this.$router.push({name:'app_msg_s'})
+          this.$http.post("http://87ju84.natappfree.cc/check-car/app/check/user/addUserCar", {
+            "carType": this.form.carType,
+            "carId": this.form.carId,
+            "engineId": this.form.engineId,
+            "registerTime": this.form.registerTime,
+            "call": this.form.call
+          }).then(function (res) {
+            console.log(res);
+          })
         }
       }
     }
@@ -57,4 +78,13 @@
   height: 10rem;
   background-color: #ffa2c4;
 }
+.nextBtn{
+  margin-left: 15px;
+  width: 90%;
+}
+.suporse{
+  margin: 0.5rem auto;
+  text-align: center;
+}
+
 </style>

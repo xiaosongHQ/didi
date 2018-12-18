@@ -25,6 +25,10 @@
         新用户？点击这里注册
       </router-link>
     </div>
+    <mu-dialog title="提示信息" width="360" :open.sync="openSimple">
+      {{msg}}
+      <mu-button slot="actions" flat color="primary" @click="closeSimpleDialog">Close</mu-button>
+    </mu-dialog>
   </div>
 
 </template>
@@ -41,11 +45,15 @@
           mobile: '',
           password: ''
         },
-        resState: false
+        resState: false,
+        openSimple: false,
+        msg:''
       }
     },
     methods: {
       submit() {
+        let params = {mobile:18241033575,password:123456,token:'4556'};
+        sessionStorage.setItem('USER',JSON.stringify(params));
         this.$refs.form.validate().then((result) => {
           if (result) {
             this.$http.post("http://87ju84.natappfree.cc/check-car/app/login", {
@@ -55,18 +63,23 @@
               .then(function (res) {
                 // 响应成功回调
                 if (res.code === 200) {
-                  console.log(res);
-                  //弹出登录成功
+                  sessionStorage.setItem('USER',res.token)
+                  //保存session
                   //跳转到首页
+                  this.$router.push({name: 'index'})
 
                 }else if (res.code === 500) {
-                  console.log(res.msg);
-                  //提示手机或密码错误
+                  this.openSimple = true
+                  this.msg = res.msg
+                  // this.openSimple = true;
                 }
               })
           }
         });
       },
+      closeSimpleDialog () {
+        this.openSimple = false;
+      }
     }
   }
 </script>

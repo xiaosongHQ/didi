@@ -24,6 +24,10 @@
         已经有账号了？点击登录
       </router-link>
     </div>
+    <mu-dialog title="提示信息" width="360" :open.sync="openSimple">
+      {{msg}}
+      <mu-button slot="actions" flat color="primary" @click="closeSimpleDialog">Close</mu-button>
+    </mu-dialog>
   </div>
 
 </template>
@@ -50,30 +54,22 @@
           password: "",
           mobile: ""
         },
-        openSimple: false
+        openSimple: false,
+        msg:''
       }
     },
     methods: {
-    toast () {
-    /*  this.$toast.message('hello world');
-      this.$toast.success('hello world');
-      this.$toast.info('hello world');
-      this.$toast.warning('hello world');
-      this.$toast.error('hello world');*/
-    },
       submit () {
         this.$refs.form.validate().then((result) => {
           if(result){
             this.$http.post("http://87ju84.natappfree.cc/check-car/app/register", {"username":this.validateForm.username,"password":this.validateForm.password,"mobile":this.validateForm.mobile}).then(function(res){
               // 响应成功回调
               if(res.code === 200){
-                alert('注册成功')
-              /*  $toast.config({"position": "center","time": 2000})*/
-                this.$toast.success('注册成功')  //这个消息提示我觉得可能提示了 但是被tabar挡住的  我测试的时候看见hello word了的
-                // Toast.error('hello world');
-                // this.$router.push({ path:"/login"})   //注册成功跳转登录  路由有问题  可能没有配置
+                this.openSimple = true
+                this.msg = '注册成功'
+                this.$router.push({name:'login'})
               }else{
-                this.$toast.success('注册失败')
+
               }
             }, function(res){
               // 响应错误回调
@@ -85,6 +81,10 @@
     created(){
 
 
+    },
+    closeSimpleDialog () {
+      this.openSimple = false;
+      this.$router.push({name:'login'})
     }
   }
 </script>

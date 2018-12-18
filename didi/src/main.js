@@ -11,6 +11,8 @@ import Resource from 'vue-resource'
 
 Vue.config.productionTip = false
 Vue.use(Resource)
+
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

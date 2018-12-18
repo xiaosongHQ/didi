@@ -8,6 +8,7 @@ import server_process from '../components/server_process'
 import order from '../components/order/order'
 import app_msg from '../components/appointment/app_msg'
 import app_msg_s from '../components/appointment/app_msg_s'
+import app_msg_t from '../components/appointment/app_msg_t'
 import steper from '../components/common/steper'
 
 import Toast from 'muse-ui-toast';
@@ -64,6 +65,11 @@ export default new Router({
       path: '/app_msg_s',
       name: 'app_msg_s',
       component: app_msg_s
+    },
+    {
+      path: '/app_msg_t',
+      name: 'app_msg_t',
+      component: app_msg_t
     },
     {
       path: '/order',

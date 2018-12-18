@@ -83,6 +83,16 @@
         bannerImg: ''
       }
     },
+    created() {
+      // console.log(typeof sessionStorage.getItem('USER'));
+      let userInfo = JSON.parse(sessionStorage.getItem('USER'))
+      // userInfo = ''
+      if (userInfo.token) {
+        // alert(1)
+      }else {
+        this.$router.push({name: 'login'})
+      }
+    }
   }
 </script>
 
