@@ -13,11 +13,9 @@ import steper from '../components/common/steper'
 
 import Toast from 'muse-ui-toast';
 
-import MuseUI from 'muse-ui'
 
-Vue.use(MuseUI)
 
-import 'muse-ui/dist/muse-ui.css';
+
 
 // const baseUrl = 'http://8staqr.natappfree.cc'
 Vue.use(Toast);

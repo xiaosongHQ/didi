@@ -3,11 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-// import 'muse-ui/dist/muse-ui.css'
-// import './assets/material-icons.css'
 import Resource from 'vue-resource'
 
+import MuseUI from 'muse-ui'
+import 'muse-ui/dist/muse-ui.css' // 加载样式
+import './assets/material-icons.css'
 
+Vue.use(MuseUI)
 
 Vue.config.productionTip = false
 Vue.use(Resource)
