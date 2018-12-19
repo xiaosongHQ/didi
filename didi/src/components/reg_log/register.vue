@@ -1,9 +1,38 @@
 
+  <style>
+    .imageFileInput{
+    width: 9rem;
+    height: 7rem;
+    border-radius: 50%;
+    position: absolute;
+    background-color: red;
+}
+
+/*定义上传*/
+.fileInput{
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+  </style>
 <template>
+
   <div class="login">
     <h2>注册</h2>
     <mu-container class="login_box">
-      <mu-paper class="demo-paper headpic" circle :z-depth="0"></mu-paper>
+      <mu-paper class="demo-paper headpic" circle :z-depth="0">
+          <div class="imageFileInput">
+            <input class="fileInput" type="file" id="avater" name="file" accept="image/png,image/gif,image/jpeg" @change="update" />
+            <img src="" id="ex_img">
+        </div>
+        <!-- <script type="text/javascript">
+          
+
+        </script> -->
+        
+      </mu-paper>
       <mu-form class="mu-demo-form" ref="form" :model="validateForm" label-position="left" label-width="80">
         <mu-form-item label="昵称" prop="username" :rules="usernameRules">
           <mu-text-field max-length="10" v-model="validateForm.username" prop="username"></mu-text-field>
@@ -31,6 +60,11 @@
   </div>
 
 </template>
+
+
+
+
+
 
 <script>
   export default {
@@ -60,12 +94,34 @@
       }
     },
     methods: {
+
+       //上传头像
+                update(e){
+                  console.log(e);
+                  console.log(document.getElementById('avater'));
+                  let file = e.target.files[0];
+                  let param = new window.FormData(); //创建form对象
+                  param.append('file',file);//通过append向form对象添加数据
+                  console.log(param.get('file')); //FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                  let config = {
+                    headers:{'Content-Type':'multipart/form-data'}
+                  }; //添加请求头
+                  this.$http.post('http://w7dvq3.natappfree.cc/check-car/app/uploadHP/'+this.validateForm.mobile,param,config)
+                    .then(response=>{
+                      console.log(response.data);
+                    })
+                  },
       submit () {
         this.$refs.form.validate().then((result) => {
           if(result){
-            this.$http.post("http://qvddk3.natappfree.cc/check-car/app/register", {"username":this.validateForm.username,"password":this.validateForm.password,"mobile":this.validateForm.mobile}).then(function(res){
+            this.$http.post("http://w7dvq3.natappfree.cc/check-car/app/register", {"username":this.validateForm.username,"password":this.validateForm.password,"mobile":this.validateForm.mobile}).then(function(res){
               // 响应成功回调
               if(res.body.code === 200){
+
+
+
+               
+
                 this.openSimple = true
                 this.msg = '注册成功'
                 this.sign = true
@@ -89,7 +145,7 @@
       }
     },
     created(){
-
+      
 
     },
     closeSimpleDialog () {
