@@ -56,21 +56,21 @@
         // sessionStorage.setItem('USER',JSON.stringify(params));
         this.$refs.form.validate().then((result) => {
           if (result) {
-            this.$http.post("http://qvddk3.natappfree.cc/check-car/app/login", {
+            this.$ajax.post("/check-car/app/login", {
               "mobile": this.validateForm.mobile,
               "password": this.validateForm.password
             })
               .then(function (res) {
                 // 响应成功回调
-                if (res.body.code === 200) {
+                if (res.status === 200) {
                   let params = {};
                   params.expire = res.body.expire;
                   params.token = res.body.token;
-                  sessionStorage.setItem('USER',JSON.stringify(params));
+                  localStorage.setItem('USER',JSON.stringify(params));
                   //保存session
                   //跳转到首页
                   this.$router.push({name: 'index'})
-                }else if (res.body.code === 500) {
+                }else if (res.status === 500) {
                   this.openSimple = true
                   this.msg = res.body.msg
                   // this.openSimple = true;

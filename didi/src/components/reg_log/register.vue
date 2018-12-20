@@ -63,7 +63,7 @@
       submit () {
         this.$refs.form.validate().then((result) => {
           if(result){
-            this.$http.post("http://qvddk3.natappfree.cc/check-car/app/register", {"username":this.validateForm.username,"password":this.validateForm.password,"mobile":this.validateForm.mobile}).then(function(res){
+            this.$ajax.post("/check-car/app/register", {"username":this.validateForm.username,"password":this.validateForm.password,"mobile":this.validateForm.mobile}).then(function(res){
               // 响应成功回调
               if(res.body.code === 200){
                 this.openSimple = true

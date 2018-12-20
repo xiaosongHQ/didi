@@ -96,8 +96,8 @@
       }
     },
     created() {
-      let userInfo = JSON.parse(sessionStorage.getItem('USER'))
-      if (userInfo.token != ''&&userInfo.token != undefined) {
+      let userInfo = JSON.parse(localStorage.getItem('USER'));
+      if (userInfo != ''&&userInfo != undefined) {
         //认证登录状态
       }else {
         this.$router.push({name: 'login'})

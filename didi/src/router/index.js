@@ -11,21 +11,25 @@ import app_msg_s from '../components/appointment/app_msg_s'
 import app_msg_t from '../components/appointment/app_msg_t'
 import steper from '../components/common/steper'
 
-import Toast from 'muse-ui-toast';
 
 
-
-
-
-// const baseUrl = 'http://8staqr.natappfree.cc'
-Vue.use(Toast);
 Vue.use(Router)
 Vue.use(VueResource)
 
 // 数据请求
 import Axios from 'axios'
-Axios.defaults.baseURL = 'http://8staqr.natappfree.cc/'
-Vue.prototype.$ajax = Axios
+Axios.defaults.baseURL = 'http://47.93.254.11:8080';
+Vue.prototype.$ajax = Axios;
+
+  let userInfo = JSON.parse(localStorage.getItem('USER'));
+  if (userInfo != ''&&userInfo != undefined) {
+    //认证登录状态
+    Axios.defaults.headers.common['token'] = userInfo.token;
+
+  }else {
+   /* console.log(this.$router);
+    this.$router.push({name: 'login'})*/
+  }
 
 //全局组件
 

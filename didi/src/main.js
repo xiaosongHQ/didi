@@ -7,7 +7,7 @@ import Resource from 'vue-resource'
 
 import MuseUI from 'muse-ui'
 import 'muse-ui/dist/muse-ui.css' // 加载样式
-import './assets/material-icons.css'
+
 
 Vue.use(MuseUI)
 
