@@ -59,8 +59,7 @@
             this.$ajax.post("/check-car/app/login", {
               "mobile": this.validateForm.mobile,
               "password": this.validateForm.password
-            })
-              .then(function (res) {
+            }).then(function (res) {
                 // 响应成功回调
                 if (res.status === 200) {
                   let params = {};

@@ -5,8 +5,20 @@ import App from './App'
 import router from './router'
 import Resource from 'vue-resource'
 
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+
+
+
+
 import MuseUI from 'muse-ui'
 import 'muse-ui/dist/muse-ui.css' // 加载样式
+
+// import './assets/material-icons.css'
+
+Vue.prototype.axios = axios;
+
 
 
 Vue.use(MuseUI)
