@@ -28,10 +28,10 @@
             <img src="" id="ex_img">
         </div>
         <!-- <script type="text/javascript">
-          
+
 
         </script> -->
-        
+
       </mu-paper>
       <mu-form class="mu-demo-form" ref="form" :model="validateForm" label-position="left" label-width="80">
         <mu-form-item label="昵称" prop="username" :rules="usernameRules">
@@ -114,25 +114,17 @@
       submit () {
         this.$refs.form.validate().then((result) => {
           if(result){
-<<<<<<< HEAD
-            this.$ajax.post("/check-car/app/register", {"username":this.validateForm.username,"password":this.validateForm.password,"mobile":this.validateForm.mobile}).then(function(res){
-=======
-            this.$http.post("http://w7dvq3.natappfree.cc/check-car/app/register", {"username":this.validateForm.username,"password":this.validateForm.password,"mobile":this.validateForm.mobile}).then(function(res){
->>>>>>> 5b224d3181abcc2969a291a3afcfd61abd5982a3
+            this.$ajax.post("/check-car/app/register", {"username":this.validateForm.username,"password":this.validateForm.password,"mobile":this.validateForm.mobile}).then((res)=>{
               // 响应成功回调
-              if(res.body.code === 200){
-
-
-
-               
-
-                this.openSimple = true
-                this.msg = '注册成功'
+              console.log(res);
+              if(res.data.code === 200){
+                this.openSimple = true;
+                this.msg = '注册成功';
                 this.sign = true
 
               }else{
-                this.openSimple = true
-                this.msg = res.body.msg
+                this.openSimple = true;
+                this.msg = res.data.msg;
                 this.sign = false
               }
             }, function(res){
@@ -149,7 +141,7 @@
       }
     },
     created(){
-      
+
 
     },
     closeSimpleDialog () {

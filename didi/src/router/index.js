@@ -13,23 +13,33 @@ import steper from '../components/common/steper'
 
 
 
-Vue.use(Router)
-Vue.use(VueResource)
+Vue.use(Router);
+Vue.use(VueResource);
 
 // 数据请求
 import Axios from 'axios'
 Axios.defaults.baseURL = 'http://47.93.254.11:8080';
 Vue.prototype.$ajax = Axios;
 
-  let userInfo = JSON.parse(localStorage.getItem('USER'));
-  if (userInfo != ''&&userInfo != undefined) {
-    //认证登录状态
-    Axios.defaults.headers.common['token'] = userInfo.token;
+let userInfo = JSON.parse(localStorage.getItem('USER'));
 
-  }else {
-   /* console.log(this.$router);
-    this.$router.push({name: 'login'})*/
+Axios.interceptors.request.use(config => {
+  let token = userInfo.token;
+  if (token) {  // 判断是否存在token，如果存在的话，则每个http header都加上token
+    config.headers.Authorization = token;
+    console.log('interceptors config=',config)
   }
+  return config
+}, error => {
+  return Promise.reject(error)
+})
+
+
+if (userInfo != ''&&userInfo != undefined) {
+  //认证登录状态
+  Axios.defaults.headers.common["token"]  = userInfo.token;
+  Axios.defaults.method = 'POST';
+}
 
 //全局组件
 

@@ -59,20 +59,21 @@
             this.$ajax.post("/check-car/app/login", {
               "mobile": this.validateForm.mobile,
               "password": this.validateForm.password
-            }).then(function (res) {
-                // 响应成功回调
-                if (res.status === 200) {
-                  let params = {};
-                  params.expire = res.body.expire;
-                  params.token = res.body.token;
-                  localStorage.setItem('USER',JSON.stringify(params));
-                  //保存session
+            }).then((res)=>{
+              console.log(res);
+
+              // 响应成功回调
+              if (res.data.code == 200) {
+                let params = {};
+                  params.expire = res.data.expire;
+                  params.token = res.data.token;
+                localStorage.setItem('USER',JSON.stringify(params));
+                //保存session
                   //跳转到首页
-                  this.$router.push({name: 'index'})
-                }else if (res.status === 500) {
+                this.$router.push({name: 'index'})
+                }else if (res.data.code == 500) {
                   this.openSimple = true
-                  this.msg = res.body.msg
-                  // this.openSimple = true;
+                  this.msg = res.data.msg
                 }
               })
           }

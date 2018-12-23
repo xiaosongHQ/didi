@@ -4,6 +4,13 @@
 
     </div>
     <mu-form :model="form" class="mu-demo-form" :label-position="labelPosition" label-width="100">
+      <div class="select-control-group">
+        <mu-form-item prop="radio" label="运营类型">
+          <mu-flex class="select-control-row" :key="item" v-for="(index,item) in operateCar">
+            <mu-radio :value="item" v-model="radio"  :label="index"></mu-radio>
+          </mu-flex>
+        </mu-form-item>
+      </div>
       <mu-form-item prop="select" label="车辆类型">
         <mu-select v-model="form.carType">
           <mu-option v-for="(index,item) in options" :key="index" :label="index" :value="item"></mu-option>
@@ -51,23 +58,35 @@
             carId: '京B.2B945',
             engineId: 'CA6102',
             registerTime: '2018-12-16',
-            call: '18300612017'
+            call: '18300612017',
+            operateCar: 0
+          },
+          radio: 1,
+          operateCar:{
+            0:'运营车',
+            1:'非运营车'
           }
         }
       },
       methods: {
+
         to_next(){
-          this.$ajax.post("/app/check/user/addUserCar",{
-            "carType": this.form.carType,
-            "carId": this.form.carId,
-            "engineId": this.form.engineId,
-            "registerTime": this.form.registerTime,
-            "call": this.form.call
-          }).then(function (res) {
-            if (res.code === 200) {
-              // this.$router.push({name:'app_msg_s'})
+          this.$ajax({
+            methods: "POST",
+            url: "/app/check/user/addUserCar",
+            data:{
+              "carType": this.form.carType,
+              "carId": this.form.carId,
+              "engineId": this.form.engineId,
+              "registerTime": this.form.registerTime,
+              // "call": this.form.call,
+              "operateCar": 0
             }
-          })
+            }).then((res)=>{
+              if (res.code === 200) {
+                // this.$router.push({name:'app_msg_s'})
+              }
+            })
         }
       }
     }
