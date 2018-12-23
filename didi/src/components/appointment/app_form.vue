@@ -72,14 +72,12 @@
 
         to_next(){
           this.$ajax({
-            methods: "POST",
             url: "/app/check/user/addUserCar",
             data:{
               "carType": this.form.carType,
               "carId": this.form.carId,
               "engineId": this.form.engineId,
               "registerTime": this.form.registerTime,
-              // "call": this.form.call,
               "operateCar": 0
             }
             }).then((res)=>{

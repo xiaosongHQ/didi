@@ -26,7 +26,7 @@ let userInfo = JSON.parse(localStorage.getItem('USER'));
 Axios.interceptors.request.use(config => {
   let token = userInfo.token;
   if (token) {  // 判断是否存在token，如果存在的话，则每个http header都加上token
-    config.headers.Authorization = token;
+    config.headers.token = token;
     console.log('interceptors config=',config)
   }
   return config

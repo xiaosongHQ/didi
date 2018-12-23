@@ -1,22 +1,3 @@
-
-  <style>
-    .imageFileInput{
-    width: 9rem;
-    height: 7rem;
-    border-radius: 50%;
-    position: absolute;
-    background-color: red;
-}
-
-/*定义上传*/
-.fileInput{
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    opacity: 0;
-}
-  </style>
 <template>
 
   <div class="login">
@@ -25,13 +6,8 @@
       <mu-paper class="demo-paper headpic" circle :z-depth="0">
           <div class="imageFileInput">
             <input class="fileInput" type="file" id="avater" name="file" accept="image/png,image/gif,image/jpeg" @change="update" />
-            <img src="" id="ex_img">
-        </div>
-        <!-- <script type="text/javascript">
-
-
-        </script> -->
-
+            <img :src="headpic" id="ex_img">
+          </div>
       </mu-paper>
       <mu-form class="mu-demo-form" ref="form" :model="validateForm" label-position="left" label-width="80">
         <mu-form-item label="昵称" prop="username" :rules="usernameRules">
@@ -90,7 +66,8 @@
         },
         openSimple: false,
         msg:'',
-        sign: false
+        sign: false,
+        headpic: '../../../static/images/people.png'
       }
     },
     methods: {
@@ -106,7 +83,7 @@
                   let config = {
                     headers:{'Content-Type':'multipart/form-data'}
                   }; //添加请求头
-                  this.$http.post('http://w7dvq3.natappfree.cc/check-car/app/uploadHP/'+this.validateForm.mobile,param,config)
+                  this.$ajax.post('/check-car/app/uploadHP/'+this.validateForm.mobile,param,config)
                     .then(response=>{
                       console.log(response.data);
                     })
@@ -175,6 +152,25 @@
   }
   .to_login{
     text-align: center;
+  }
+  .imageFileInput{
+    width: 9rem;
+    height: 7rem;
+    border-radius: 50%;
+    position: absolute;
+    background-color: red;
+  }
+  .imageFileInput img{
+    width: 100%;
+    height: 100%;
+  }
+  /*定义上传*/
+  .fileInput{
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
   }
 </style>
 
