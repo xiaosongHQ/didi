@@ -1,6 +1,6 @@
 <template>
     <div class="order">
-      order
+      div
       <foot-nav></foot-nav>
     </div>
 </template>

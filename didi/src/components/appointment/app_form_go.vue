@@ -2,14 +2,11 @@
   <mu-container>
     <mu-form :model="form" class="mu-demo-form" :label-position="labelPosition" label-width="100">
       <mu-form-item prop="date" label="到站时间">
-        <mu-date-input v-model="form.date" type="dateTime" actions></mu-date-input>
-      </mu-form-item>
-      <mu-form-item prop="input" label="车辆类型">
-        <mu-text-field v-model="form.input"></mu-text-field>
+        <mu-date-input v-model="form.orderTime" type="dateTime" actions></mu-date-input>
       </mu-form-item>
       <mu-form-item prop="select" label="燃油类型">
-        <mu-select v-model="form.oilType">
-          <mu-option v-for="(index,item) in oilType" :key="index" :label="index" :value="item"></mu-option>
+        <mu-select v-model="form.fuelType">
+          <mu-option v-for="(index,item) in fuelType" :key="index" :label="index" :value="item"></mu-option>
         </mu-select>
       </mu-form-item>
       <mu-form-item prop="select" label="驱动类型">
@@ -17,7 +14,7 @@
           <mu-option v-for="(index,item) in driverType" :key="index" :label="index" :value="item"></mu-option>
         </mu-select>
       </mu-form-item>
-      <mu-button class="nextBtn" :to="({name:'app_msg_t'})" color="primary">确认支付</mu-button>
+      <mu-button class="nextBtn" @click="comfired" color="primary">确认</mu-button>
     </mu-form>
   </mu-container>
 </template>
@@ -30,7 +27,7 @@
           options: [
             '微型车', '小型车', '中型车', '大型车'
           ],
-          oilType: {
+          fuelType: {
             1:"汽油",
             2:"柴油",
             3:"混合油",
@@ -50,16 +47,29 @@
           },
           labelPosition: 'left',
           form: {
-            carType: '',
-            smscode:'',
-            carId: '',
-            engineId: '',
-            registerTime: '',
-            call: ''
+            orderTime: '2018-12-25 1:20:15',
+            fuelType: '5',
+            driverType: '2'
           },
           select:{
 
-          }
+          },
+          agentId:""
+        }
+      },
+      methods:{
+        comfired(){
+          this.$ajax.post("/check-car/app/check/addOrder", {
+            "agentId": "3",
+            "orderTime": this.form.orderTime,
+            "fuelType": this.form.fuelType,
+            "driverType": this.form.driverType
+          }).then((res)=> {
+
+            if (res.data.code === 200) {
+              this.$router.push({name:'order',query:{orderId:res.data.orderId,orderTime:res.data.orderTime,order_subject:res.data.order_subject,basePrice:res.data.basePrice,operatePrice:res.data.operatePrice,orderMoney:res.data.orderMoney}});
+            }
+          });
         }
       }
     }

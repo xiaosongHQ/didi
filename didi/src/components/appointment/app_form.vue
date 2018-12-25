@@ -3,14 +3,10 @@
     <div class="font_pic">
 
     </div>
-    <mu-form :model="form" class="mu-demo-form" :label-position="labelPosition" label-width="100">
-      <div class="select-control-group">
-        <mu-form-item prop="radio" label="运营类型">
-          <mu-flex class="select-control-row" :key="item" v-for="(index,item) in operateCar">
-            <mu-radio :value="item" v-model="radio"  :label="index"></mu-radio>
-          </mu-flex>
-        </mu-form-item>
-      </div>
+    <mu-form :model="form" class="mu-demo-form" label-position="left" label-width="100">
+      <mu-flex class="select-control-row">
+        <mu-checkbox v-model="checkbox" :label="'运营车'"></mu-checkbox>
+      </mu-flex>
       <mu-form-item prop="select" label="车辆类型">
         <mu-select v-model="form.carType">
           <mu-option v-for="(index,item) in options" :key="index" :label="index" :value="item"></mu-option>
@@ -55,36 +51,27 @@
           form: {
             carType: '',
             smscode:'',
-            carId: '京B.2B945',
-            engineId: 'CA6102',
-            registerTime: '2018-12-16',
-            call: '18300612017',
-            operateCar: 0
+            carId: '',
+            engineId: '',
+            registerTime: '',
+            call: ''
           },
-          radio: 1,
-          operateCar:{
-            0:'运营车',
-            1:'非运营车'
-          }
+          checkbox: true
         }
       },
       methods: {
-
         to_next(){
-          this.$ajax({
-            url: "/app/check/user/addUserCar",
-            data:{
-              "carType": this.form.carType,
-              "carId": this.form.carId,
-              "engineId": this.form.engineId,
-              "registerTime": this.form.registerTime,
-              "operateCar": 0
+          this.$ajax.post("/check-car/app/check/user/addUserCar", {
+            "carType": this.form.carType,
+            "carId": this.form.carId,
+            "engineId": this.form.engineId,
+            "registerTime": this.form.registerTime,
+            "operateCar": (this.checkbox == true? 1: 0)
+          }).then((res)=> {
+            if (res.data.code ==200){
+              this.$router.push({name:'agent'})
             }
-            }).then((res)=>{
-              if (res.code === 200) {
-                // this.$router.push({name:'app_msg_s'})
-              }
-            })
+          });
         }
       }
     }

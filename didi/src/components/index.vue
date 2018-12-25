@@ -29,7 +29,7 @@
               <p>一键预约年检，快速办理</p>
             </div>
           </router-link>
-          <router-link class="appointment" :to="{name:'register'}">
+          <router-link class="appointment" :to="{name:'index'}">
             <div class="head_pic">
               <img src="../../static/images/people.png" alt="">
             </div>
