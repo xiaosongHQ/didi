@@ -1,7 +1,8 @@
 <template>
   <mu-container>
     <div class="font_pic">
-
+      <input class="fileInput" type="file" id="avater" name="file" accept="image/png,image/gif,image/jpeg" @change="update" />
+      <img :src="headpic" id="ex_img">
     </div>
     <mu-form :model="form" class="mu-demo-form" label-position="left" label-width="100">
       <mu-flex class="select-control-row">
@@ -33,6 +34,10 @@
     <div class="suporse">
       技术支持：北京道火自然科技
     </div>
+    <mu-dialog title="提示信息" width="360" :open.sync="openSimple">
+      {{msg}}
+      <mu-button slot="actions" flat color="primary" @click="closeSimpleDialog">Close</mu-button>
+    </mu-dialog>
   </mu-container>
 </template>
 
@@ -47,6 +52,8 @@
             3:'中型车',
             4:'大型车'
           },
+          msg:"",
+          openSimple: false,
           labelPosition: 'left',
           form: {
             carType: '',
@@ -56,7 +63,8 @@
             registerTime: '',
             call: ''
           },
-          checkbox: true
+          checkbox: true,
+          headpic: '../../../static/aui/image/demo4.png'
         }
       },
       methods: {
@@ -70,9 +78,27 @@
           }).then((res)=> {
             if (res.data.code ==200){
               this.$router.push({name:'agent'})
+            }else if (res.data.code == 500){
+              this.openSimple = true;
+              this.msg = res.data.msg
             }
           });
-        }
+        },
+        closeSimpleDialog () {
+          this.openSimple = false;
+        },
+        update(e){
+          console.log(e);
+          console.log(document.getElementById('avater'));
+          let files = e.target.files[0];
+         /* let param = new window.FormData(); //创建form对象
+          param.append('file',file);//通过append向form对象添加数据*/
+          // console.log(param.get('file')); //FormData私有类对象，访问不到，可以通过get判断值是否传进去
+          this.$ajax.post('/check-car/app/check/uploadCarPic',{"file": files.name})
+            .then((res)=>{
+              console.log(res.data);
+            })
+        },
       }
     }
 </script>
@@ -83,6 +109,10 @@
   height: 10rem;
   background-color: #ffa2c4;
 }
+.font_pic img{
+  width: 100%;
+  height: 100%;
+}
 .nextBtn{
   margin-left: 15px;
   width: 90%;
@@ -91,5 +121,12 @@
   margin: 0.5rem auto;
   text-align: center;
 }
-
+/*定义上传*/
+.fileInput{
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0;
+}
 </style>

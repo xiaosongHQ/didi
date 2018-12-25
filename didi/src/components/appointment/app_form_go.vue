@@ -16,6 +16,10 @@
       </mu-form-item>
       <mu-button class="nextBtn" @click="comfired" color="primary">确认</mu-button>
     </mu-form>
+    <mu-dialog title="提示信息" width="360" :open.sync="openSimple">
+      {{msg}}
+      <mu-button slot="actions" flat color="primary" @click="closeSimpleDialog">Close</mu-button>
+    </mu-dialog>
   </mu-container>
 </template>
 
@@ -27,6 +31,7 @@
           options: [
             '微型车', '小型车', '中型车', '大型车'
           ],
+          msg:"",
           fuelType: {
             1:"汽油",
             2:"柴油",
@@ -45,11 +50,12 @@
             2:"后驱",
             3:"四驱"
           },
+          openSimple: false,
           labelPosition: 'left',
           form: {
-            orderTime: '2018-12-25 1:20:15',
-            fuelType: '5',
-            driverType: '2'
+            orderTime: '2018-12-25 20:06:00',
+            fuelType: '',
+            driverType: ''
           },
           select:{
 
@@ -68,8 +74,14 @@
 
             if (res.data.code === 200) {
               this.$router.push({name:'order',query:{orderId:res.data.orderId,orderTime:res.data.orderTime,order_subject:res.data.order_subject,basePrice:res.data.basePrice,operatePrice:res.data.operatePrice,orderMoney:res.data.orderMoney}});
+            }else if (res.data.code == 500){
+              this.openSimple = true;
+              this.msg = res.data.msg
             }
           });
+        },
+        closeSimpleDialog () {
+          this.openSimple = false;
         }
       }
     }

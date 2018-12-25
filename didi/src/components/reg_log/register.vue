@@ -73,28 +73,28 @@
     methods: {
 
        //上传头像
-                update(e){
-                  console.log(e);
-                  console.log(document.getElementById('avater'));
-                  let file = e.target.files[0];
-                  let param = new window.FormData(); //创建form对象
-                  param.append('file',file);//通过append向form对象添加数据
-                  console.log(param.get('file')); //FormData私有类对象，访问不到，可以通过get判断值是否传进去
-                  let config = {
-                    headers:{'Content-Type':'multipart/form-data'}
-                  }; //添加请求头
-                  this.$ajax.post('/check-car/app/uploadHP/'+this.validateForm.mobile,param,config)
-                    .then(response=>{
-                      console.log(response.data);
-                    })
-                  },
+      update(e){
+        console.log(e);
+        console.log(document.getElementById('avater'));
+        let file = e.target.files[0];
+        let param = new window.FormData(); //创建form对象
+        param.append('file',file);//通过append向form对象添加数据
+        console.log(param.get('file')); //FormData私有类对象，访问不到，可以通过get判断值是否传进去
+        let config = {
+          headers:{'Content-Type':'multipart/form-data'}
+        }; //添加请求头
+        this.$ajax.post('/check-car/app/uploadHP/'+this.validateForm.mobile,param,config)
+          .then(response=>{
+            console.log(response.data);
+          })
+        },
       submit () {
         this.$refs.form.validate().then((result) => {
           if(result){
             this.$ajax.post("/check-car/app/register", {"username":this.validateForm.username,"password":this.validateForm.password,"mobile":this.validateForm.mobile}).then((res)=>{
               // 响应成功回调
               console.log(res);
-              if(res.data.code === 200){
+              if(res.data.code == 200){
                 this.openSimple = true;
                 this.msg = '注册成功';
                 this.sign = true
