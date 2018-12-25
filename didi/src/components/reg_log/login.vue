@@ -47,11 +47,14 @@
         },
         resState: false,
         openSimple: false,
-        msg:''
+        msg:'',
+        date:0
       }
     },
     methods: {
       submit() {
+        const date1 = new Date();
+        console.log(date1-this.date);
         // let params = {mobile:18241033575,password:123456,token:'4556'};
         // sessionStorage.setItem('USER',JSON.stringify(params));
         this.$refs.form.validate().then((result) => {
@@ -60,13 +63,12 @@
               "mobile": this.validateForm.mobile,
               "password": this.validateForm.password
             }).then((res)=>{
-              console.log(res);
-
               // 响应成功回调
               if (res.data.code == 200) {
                 let params = {};
                   params.expire = res.data.expire;
                   params.token = res.data.token;
+                  params.date = new Date();
                 localStorage.setItem('USER',JSON.stringify(params));
                 //保存session
                   //跳转到首页

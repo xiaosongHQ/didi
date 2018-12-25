@@ -31,6 +31,9 @@
           <span class="col-md-3">服务费用：￥{{item.tinyPrice}}</span>
           <span class="col-md-3">运营车费用：￥{{item.operatePrice}}</span>
         </div>
+        <div class="appoint">
+          立即预约
+        </div>
       </div>
     </div>
   </div>
@@ -103,20 +106,21 @@
         addressChange (value, index) {
           switch (index) {
             case 0:
-              this.addressProvince = value
-              const arr = address[value]
-              this.addressSlots[1].values = arr
-              this.addressCity = arr[0]
-              break
+              this.addressProvince = value;
+              const arr = address[value];
+              this.addressSlots[1].values = arr;
+              this.addressCity = arr[0];
+              break;
             case 1:
-              this.addressCity = value
+              this.addressCity = value;
               break
           }
           this.address = [this.addressProvince, this.addressCity]
 
         },
-        agent(){
-          // this.$router.push({name:'app_msg_s',query:{agentId:1}})
+        agent(e){
+          let id = e.target.getAttribute('id')
+          this.$router.push({name:'app_msg_s',query:{agentId:id}})
         }
       },
       created(){
@@ -137,7 +141,7 @@
 }
 .agent_cell{
   padding: 5px 10px;
-  background-color: #00bcd4;
+  background-color: #b4b4b4;
   margin-bottom: 10px;
 }
 .name{
@@ -145,5 +149,11 @@
 }
 .tel{
   margin-left: 15px;
+}
+.appoint{
+  width: 60px;
+  line-height: 30px;
+  background-color: #00bcd4;
+  color: #fafafa;
 }
 </style>

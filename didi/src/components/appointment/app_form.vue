@@ -6,7 +6,7 @@
     </div>
     <mu-form :model="form" class="mu-demo-form" label-position="left" label-width="100">
       <mu-flex class="select-control-row">
-        <mu-checkbox v-model="checkbox" :label="'运营车'"></mu-checkbox>
+        <mu-checkbox v-model="checkbox" :label="'运营车：状态选择'"></mu-checkbox>
       </mu-flex>
       <mu-form-item prop="select" label="车辆类型">
         <mu-select v-model="form.carType">
@@ -74,7 +74,8 @@
             "carId": this.form.carId,
             "engineId": this.form.engineId,
             "registerTime": this.form.registerTime,
-            "operateCar": (this.checkbox == true? 1: 0)
+            "operateCar": (this.checkbox == true? 1: 0),
+            "call": this.form.call
           }).then((res)=> {
             if (res.data.code ==200){
               this.$router.push({name:'agent'})
@@ -88,15 +89,22 @@
           this.openSimple = false;
         },
         update(e){
-          console.log(e);
-          console.log(document.getElementById('avater'));
-          let files = e.target.files[0];
-         /* let param = new window.FormData(); //创建form对象
-          param.append('file',file);//通过append向form对象添加数据*/
+          let file = e.target.files[0];
+          let param = new window.FormData(); //创建form对象
+          param.append('file',file);//通过append向form对象添加数据
           // console.log(param.get('file')); //FormData私有类对象，访问不到，可以通过get判断值是否传进去
-          this.$ajax.post('/check-car/app/check/uploadCarPic',{"file": files.name})
+          this.$ajax.post('/check-car/app/check/uploadCarPic',param)
             .then((res)=>{
-              console.log(res.data);
+              console.log(res);
+              if (res.data.code == 200){
+                this.$ajax.get('/check-car/app/check/showCarPic')
+                  .then((res)=>{
+                    console.log(res);
+                    if (res.data.code == 200){
+                        
+                    }
+                  })
+              }
             })
         },
       }

@@ -41,8 +41,8 @@
       <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/didi/src/components/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
-              <caret line="97" column="13" lean-forward="true" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="13" />
+            <state relative-caret-position="250">
+              <caret line="107" column="42" selection-start-line="107" selection-start-column="42" selection-end-line="107" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -59,11 +59,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="agent.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/didi/src/components/appointment/agent.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="122" column="63" selection-start-line="122" selection-start-column="63" selection-end-line="122" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="login.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/didi/src/components/reg_log/login.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="75" column="41" lean-forward="true" selection-start-line="74" selection-start-column="18" selection-end-line="75" selection-end-column="41" />
+            <state relative-caret-position="125">
+              <caret line="68" column="31" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -71,8 +80,8 @@
       <file leaf-file-name="order.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/didi/src/components/order/order.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="47" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+            <state relative-caret-position="425">
+              <caret line="47" column="61" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -80,8 +89,8 @@
       <file leaf-file-name="register.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/didi/src/components/reg_log/register.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="166" column="2" lean-forward="true" selection-start-line="166" selection-start-column="2" selection-end-line="173" selection-end-column="3" />
+            <state relative-caret-position="1250">
+              <caret line="167" column="13" lean-forward="true" selection-start-line="167" selection-start-column="13" selection-end-line="167" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -89,8 +98,17 @@
       <file leaf-file-name="app_form.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/didi/src/components/appointment/app_form.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="112" column="12" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="12" />
+            <state relative-caret-position="400">
+              <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app_msg.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/didi/src/components/appointment/app_msg.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="3" column="21" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="3" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -98,17 +116,8 @@
       <file leaf-file-name="app_form_go.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/didi/src/components/appointment/app_form_go.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="charge.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/didi/src/components/appointment/charge.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="281">
+              <caret line="83" column="10" lean-forward="true" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -127,6 +136,7 @@
     <findStrings>
       <find>params</find>
       <find>update</find>
+      <find>files</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -146,16 +156,16 @@
         <option value="$PROJECT_DIR$/didi/src/components/common/foot.vue" />
         <option value="$PROJECT_DIR$/didi/src/assets/material-icons.css" />
         <option value="$PROJECT_DIR$/didi/src/App.vue" />
-        <option value="$PROJECT_DIR$/didi/src/components/reg_log/login.vue" />
         <option value="$PROJECT_DIR$/didi/src/main.js" />
         <option value="$PROJECT_DIR$/didi/src/components/appointment/charge.vue" />
-        <option value="$PROJECT_DIR$/didi/src/components/index.vue" />
-        <option value="$PROJECT_DIR$/didi/src/components/appointment/agent.vue" />
-        <option value="$PROJECT_DIR$/didi/src/components/order/order.vue" />
-        <option value="$PROJECT_DIR$/didi/src/components/appointment/app_form_go.vue" />
         <option value="$PROJECT_DIR$/didi/config/index.js" />
         <option value="$PROJECT_DIR$/didi/src/router/index.js" />
         <option value="$PROJECT_DIR$/didi/src/components/reg_log/register.vue" />
+        <option value="$PROJECT_DIR$/didi/src/components/appointment/agent.vue" />
+        <option value="$PROJECT_DIR$/didi/src/components/appointment/app_form_go.vue" />
+        <option value="$PROJECT_DIR$/didi/src/components/order/order.vue" />
+        <option value="$PROJECT_DIR$/didi/src/components/reg_log/login.vue" />
+        <option value="$PROJECT_DIR$/didi/src/components/index.vue" />
         <option value="$PROJECT_DIR$/didi/src/components/appointment/app_form.vue" />
       </list>
     </option>
@@ -301,12 +311,12 @@
       <workItem from="1545443654572" duration="5923000" />
       <workItem from="1545548605810" duration="11674000" />
       <workItem from="1545666024594" duration="9239000" />
-      <workItem from="1545733777525" duration="11116000" />
+      <workItem from="1545733777525" duration="20285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94501000" />
+    <option name="totallyTimeSpent" value="103670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -568,16 +578,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/didi/src/assets/icon.woff2" />
-    <entry file="file://$PROJECT_DIR$/didi/src/components/appointment/app_msg.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="21" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="3" selection-end-column="21" />
-          <folding>
-            <element signature="e#58#95#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/didi/src/components/appointment/app_msg_s.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -614,31 +614,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/didi/src/components/appointment/agent.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="117" column="14" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/didi/src/components/appointment/charge.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/didi/src/components/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="97" column="13" lean-forward="true" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/didi/src/components/reg_log/login.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="75" column="41" lean-forward="true" selection-start-line="74" selection-start-column="18" selection-end-line="75" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -675,31 +654,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/didi/src/components/reg_log/register.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1250">
+          <caret line="167" column="13" lean-forward="true" selection-start-line="167" selection-start-column="13" selection-end-line="167" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/didi/src/components/appointment/agent.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="122" column="63" selection-start-line="122" selection-start-column="63" selection-end-line="122" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/didi/src/components/appointment/app_msg.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="21" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="3" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/didi/src/components/appointment/app_form_go.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="17" />
+        <state relative-caret-position="281">
+          <caret line="83" column="10" lean-forward="true" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/didi/src/components/order/order.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="47" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+        <state relative-caret-position="425">
+          <caret line="47" column="61" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/didi/src/components/reg_log/register.vue">
+    <entry file="file://$PROJECT_DIR$/didi/src/components/reg_log/login.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="166" column="2" lean-forward="true" selection-start-line="166" selection-start-column="2" selection-end-line="173" selection-end-column="3" />
+        <state relative-caret-position="125">
+          <caret line="68" column="31" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/didi/src/components/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="107" column="42" selection-start-line="107" selection-start-column="42" selection-end-line="107" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/didi/src/components/appointment/app_form.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="112" column="12" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="12" />
+        <state relative-caret-position="400">
+          <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
         </state>
       </provider>
     </entry>

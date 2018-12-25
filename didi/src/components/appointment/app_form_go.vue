@@ -53,7 +53,7 @@
           openSimple: false,
           labelPosition: 'left',
           form: {
-            orderTime: '2018-12-25 20:06:00',
+            orderTime: '',
             fuelType: '',
             driverType: ''
           },
@@ -65,13 +65,15 @@
       },
       methods:{
         comfired(){
+          let date = JSON.stringify(this.form.orderTime);
+          date = date.replace("T"," ");
+          date = date.slice(1,20);
           this.$ajax.post("/check-car/app/check/addOrder", {
-            "agentId": "3",
-            "orderTime": this.form.orderTime,
+            "agentId": this.$route.query.agentId,
+            "orderTime": date,
             "fuelType": this.form.fuelType,
             "driverType": this.form.driverType
           }).then((res)=> {
-
             if (res.data.code === 200) {
               this.$router.push({name:'order',query:{orderId:res.data.orderId,orderTime:res.data.orderTime,order_subject:res.data.order_subject,basePrice:res.data.basePrice,operatePrice:res.data.operatePrice,orderMoney:res.data.orderMoney}});
             }else if (res.data.code == 500){

@@ -102,6 +102,11 @@
       }else {
         this.$router.push({name: 'login'})
       }
+      let nowdate = new Date();
+      if ((nowdate - userInfo.date) > userInfo.expire) {
+        localStorage.clear();
+        this.$router.push({name: 'login'})
+      }
     }
   }
 </script>

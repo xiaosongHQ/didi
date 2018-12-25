@@ -26,33 +26,26 @@
       data(){
           return{
             order_list:{
-                orderId: "566",
-                order_subject: "beij",
-                orderTime: "",
-                orderMoney:""
-            }
+
+            },
           }
       },
       methods:{
         go_charge(){
           this.$ajax.get("/check-car/app/alipay/goAlipay", {
-            "orderId": "6665544"
+            "orderId": this.order_list.orderId
           }).then((res)=> {
-            console.log(res);
             if (res.data.code == 200) {
-              this.$router.push({name:'order',query:{orderId:res.data.orderId,orderTime:res.data.orderTime,order_subject:res.data.order_subject,basePrice:res.data.basePrice,operatePrice:res.data.operatePrice,orderMoney:res.data.orderMoney}});
+
             }
           });
         }
       },
       created(){
-        alert(1)
         this.$ajax.get("/check-car/app/check/userOrders", {
-
         }).then((res)=> {
-          console.log(res);
           if (res.data.code == 200) {
-
+              this.order_list = res.data.data[0].orderEntity;
           }
         });
       }
