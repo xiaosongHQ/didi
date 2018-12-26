@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48343466-dc17-4b62-9d7d-b8ba2adbeb71" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/didi/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/didi/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/didi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/didi/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/didi/src/components/reg_log/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/didi/src/components/reg_log/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/didi/src/components/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/didi/src/components/index.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/didi/src/components/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="97" column="15" lean-forward="true" selection-start-line="97" selection-start-column="15" selection-end-line="97" selection-end-column="15" />
+            <state relative-caret-position="660">
+              <caret line="110" column="9" lean-forward="true" selection-start-line="103" selection-start-column="8" selection-end-line="110" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -59,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/didi/src/components/reg_log/login.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="55" column="33" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
+            <state relative-caret-position="308">
+              <caret line="87" column="5" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -128,6 +125,7 @@
       <find>params</find>
       <find>update</find>
       <find>files</find>
+      <find>create</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -305,12 +303,12 @@
       <workItem from="1545733777525" duration="20285000" />
       <workItem from="1545792103756" duration="55000" />
       <workItem from="1545792216421" duration="43000" />
-      <workItem from="1545794101357" duration="236000" />
+      <workItem from="1545794101357" duration="488000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104004000" />
+    <option name="totallyTimeSpent" value="104256000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -684,17 +682,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/didi/src/components/index.vue">
+    <entry file="file://$PROJECT_DIR$/didi/src/components/reg_log/login.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="97" column="15" lean-forward="true" selection-start-line="97" selection-start-column="15" selection-end-line="97" selection-end-column="15" />
+        <state relative-caret-position="308">
+          <caret line="87" column="5" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/didi/src/components/reg_log/login.vue">
+    <entry file="file://$PROJECT_DIR$/didi/src/components/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="55" column="33" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
+        <state relative-caret-position="660">
+          <caret line="110" column="9" lean-forward="true" selection-start-line="103" selection-start-column="8" selection-end-line="110" selection-end-column="9" />
         </state>
       </provider>
     </entry>
