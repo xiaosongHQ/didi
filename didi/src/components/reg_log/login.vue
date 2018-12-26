@@ -54,7 +54,6 @@
     methods: {
       submit() {
         const date1 = new Date();
-        console.log(date1-this.date);
         // let params = {mobile:18241033575,password:123456,token:'4556'};
         // sessionStorage.setItem('USER',JSON.stringify(params));
         this.$refs.form.validate().then((result) => {
