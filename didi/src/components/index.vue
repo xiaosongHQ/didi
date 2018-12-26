@@ -9,7 +9,7 @@
           <img :src="'../../static/images/banner1.png'">
         </mu-carousel-item>
         <mu-carousel-item>
-          <img :src="'../../static/images/banner3.png'">
+          <img :src="'../../static/images/banner2.png'">
         </mu-carousel-item>
       </mu-carousel>
       <div class="main_cell">
