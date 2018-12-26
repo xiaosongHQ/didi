@@ -1,7 +1,7 @@
 <template>
   <mu-container id="footer">
     <mu-bottom-nav :value="bottomNav" @change="handleChange">
-        <mu-bottom-nav-item :to="{name:'index'}" value="/" title="预约年检" icon="restore"></mu-bottom-nav-item>
+        <mu-bottom-nav-item :to="{name:'index'}" value="/" title="预约年检" icon="man3"></mu-bottom-nav-item>
         <mu-bottom-nav-item :to="{name:'server_process'}" value="/server_process" title="服务流程" icon="dns"></mu-bottom-nav-item>
         <mu-bottom-nav-item :to="{name:'order_list'}" value="/order_list" title="我的订单" icon="assignment"></mu-bottom-nav-item>
     </mu-bottom-nav>
