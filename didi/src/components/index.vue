@@ -265,7 +265,7 @@
     padding-bottom: 5px;
   }
   .cell_box{
-    height: 265px;
+    min-height: 265px;
     box-shadow: 0 0 0.3rem 0 #05d4be;
   }
   .lrtitle{
