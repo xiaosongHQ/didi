@@ -103,7 +103,7 @@
         this.$router.push({name: 'login'})
       }
       let nowdate = new Date();
-      if ((nowdate - userInfo.date) > userInfo.expire) {
+      if ((nowdate - userInfo.date)/1000 > userInfo.expire) {
         localStorage.clear();
         this.$router.push({name: 'login'})
       }
