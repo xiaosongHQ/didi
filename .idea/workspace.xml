@@ -32,8 +32,8 @@
       <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/didi/src/components/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="110" column="9" lean-forward="true" selection-start-line="103" selection-start-column="8" selection-end-line="110" selection-end-column="9" />
+            <state relative-caret-position="693">
+              <caret line="111" column="9" lean-forward="true" selection-start-line="111" selection-start-column="9" selection-end-line="111" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -175,7 +175,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1065" />
@@ -303,12 +303,12 @@
       <workItem from="1545733777525" duration="20285000" />
       <workItem from="1545792103756" duration="55000" />
       <workItem from="1545792216421" duration="43000" />
-      <workItem from="1545794101357" duration="488000" />
+      <workItem from="1545794101357" duration="675000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104256000" />
+    <option name="totallyTimeSpent" value="104443000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -691,8 +691,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/didi/src/components/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="110" column="9" lean-forward="true" selection-start-line="103" selection-start-column="8" selection-end-line="110" selection-end-column="9" />
+        <state relative-caret-position="693">
+          <caret line="111" column="9" lean-forward="true" selection-start-line="111" selection-start-column="9" selection-end-line="111" selection-end-column="9" />
         </state>
       </provider>
     </entry>
