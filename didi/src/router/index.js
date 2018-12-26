@@ -6,6 +6,7 @@ import register from '../components/reg_log/register'
 import login from '../components/reg_log/login'
 import server_process from '../components/server_process'
 import order from '../components/order/order'
+import order_list from '../components/order/order_list'
 import agent from '../components/appointment/agent'
 import charge from '../components/appointment/charge'
 import app_msg from '../components/appointment/app_msg'
@@ -87,6 +88,11 @@ export default new Router({
       path: '/order',
       name: 'order',
       component: order
+    },
+    {
+      path: '/order_list',
+      name: 'order_list',
+      component: order_list
     },
     {
       path: '/server_process',

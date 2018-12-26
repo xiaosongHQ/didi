@@ -12,17 +12,14 @@
       <div class="go_charge" @click="go_charge">
         确定付款
       </div>
-      <foot-nav></foot-nav>
+
     </div>
 </template>
 
 <script>
-  import footNav from '../../components/common/foot'
+
     export default {
         name: "order",
-      components: {
-        footNav
-      },
       data(){
           return{
             order_list:{

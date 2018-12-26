@@ -22,7 +22,7 @@
     </div>-->
     <div class="agent_list">
       <div class="agent_cell" v-for="(item,ids) in data" :key="ids">
-        <div class="box" :id="item.agentId" @click="agent">
+        <div class="box" >
           <p class="name">{{item.agentAddress}}</p>
           <p>代理商所在地:{{item.agentCity}}<span class="tel">代理商电话:{{item.agentCall}}</span></p>
           <span class="col-md-3">小车费用：￥{{item.smallPrice}}</span>
@@ -31,7 +31,7 @@
           <span class="col-md-3">服务费用：￥{{item.tinyPrice}}</span>
           <span class="col-md-3">运营车费用：￥{{item.operatePrice}}</span>
         </div>
-        <div class="appoint">
+        <div class="appoint" :id="item.agentId" @click="agent">
           立即预约
         </div>
       </div>

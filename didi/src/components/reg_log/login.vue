@@ -12,7 +12,7 @@
         </mu-form-item>
         <div class="forget">
           <span>忘记密码？</span>
-          <span style="float: right">使用滴滴账号登录</span>
+         <!-- <span style="float: right">使用滴滴账号登录</span>-->
         </div>
         <mu-form-item>
           <mu-button color="primary" @click="submit">登录</mu-button>
