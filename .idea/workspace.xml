@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48343466-dc17-4b62-9d7d-b8ba2adbeb71" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/didi/src/components/appointment/app_msg.vue" beforeDir="false" afterPath="$PROJECT_DIR$/didi/src/components/appointment/app_msg.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/didi/src/components/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/didi/src/components/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/didi/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/didi/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/didi/src/components/common/foot.vue" beforeDir="false" afterPath="$PROJECT_DIR$/didi/src/components/common/foot.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/didi/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/didi/src/router/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,19 +18,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/didi/src/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#140#161#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/didi/src/components/index.vue">
           <provider selected="true" editor-type-id="text-editor">
@@ -40,20 +27,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/didi/config/index.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/didi/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+            <state relative-caret-position="330">
+              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/didi/src/router/index.js">
+      <file leaf-file-name="foot.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/didi/src/components/common/foot.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="363">
-              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -94,7 +81,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app_msg.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app_msg.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/didi/src/components/appointment/app_msg.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="274">
@@ -143,7 +130,6 @@
         <option value="$PROJECT_DIR$/didi/src/components/appointment/app_msg_s.vue" />
         <option value="$PROJECT_DIR$/didi/src/components/common/steper.vue" />
         <option value="$PROJECT_DIR$/didi/src/components/server_process.vue" />
-        <option value="$PROJECT_DIR$/didi/src/components/common/foot.vue" />
         <option value="$PROJECT_DIR$/didi/src/assets/material-icons.css" />
         <option value="$PROJECT_DIR$/didi/src/App.vue" />
         <option value="$PROJECT_DIR$/didi/src/main.js" />
@@ -153,11 +139,12 @@
         <option value="$PROJECT_DIR$/didi/src/components/appointment/app_form_go.vue" />
         <option value="$PROJECT_DIR$/didi/src/components/order/order.vue" />
         <option value="$PROJECT_DIR$/didi/src/components/appointment/app_form.vue" />
-        <option value="$PROJECT_DIR$/didi/config/index.js" />
-        <option value="$PROJECT_DIR$/didi/src/router/index.js" />
         <option value="$PROJECT_DIR$/didi/src/components/reg_log/login.vue" />
         <option value="$PROJECT_DIR$/didi/src/components/index.vue" />
         <option value="$PROJECT_DIR$/didi/src/components/appointment/app_msg.vue" />
+        <option value="$PROJECT_DIR$/didi/src/components/common/foot.vue" />
+        <option value="$PROJECT_DIR$/didi/config/index.js" />
+        <option value="$PROJECT_DIR$/didi/src/router/index.js" />
       </list>
     </option>
   </component>
@@ -177,7 +164,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1065" />
@@ -211,43 +198,7 @@
               <item name="didi" type="b2602c69:ProjectViewProjectNode" />
               <item name="didi" type="462c0819:PsiDirectoryNode" />
               <item name="didi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="didi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="didi" type="462c0819:PsiDirectoryNode" />
-              <item name="didi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="didi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="didi" type="462c0819:PsiDirectoryNode" />
-              <item name="didi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="appointment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="didi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="didi" type="462c0819:PsiDirectoryNode" />
-              <item name="didi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="reg_log" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="didi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="didi" type="462c0819:PsiDirectoryNode" />
-              <item name="didi" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="didi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="didi" type="462c0819:PsiDirectoryNode" />
-              <item name="didi" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="aui" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -306,12 +257,12 @@
       <workItem from="1545792103756" duration="55000" />
       <workItem from="1545792216421" duration="43000" />
       <workItem from="1545794101357" duration="893000" />
-      <workItem from="1545798283308" duration="166000" />
+      <workItem from="1545798283308" duration="1651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104827000" />
+    <option name="totallyTimeSpent" value="106312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -547,6 +498,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="81" column="9" lean-forward="true" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#ul#1;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#mu-container#0;n#div#0;n#template#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -584,13 +540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="769">
           <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/didi/src/components/common/foot.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="85" selection-start-line="3" selection-start-column="78" selection-end-line="3" selection-end-column="85" />
         </state>
       </provider>
     </entry>
@@ -659,20 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/didi/config/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/didi/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/didi/src/components/reg_log/login.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -691,6 +626,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/didi/src/components/common/foot.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/didi/config/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/didi/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
         </state>
       </provider>
     </entry>
