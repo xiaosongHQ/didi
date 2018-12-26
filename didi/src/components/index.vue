@@ -94,19 +94,6 @@
         banner: 'banner',
         bannerImg: ''
       }
-    },
-    created() {
-      let userInfo = JSON.parse(localStorage.getItem('USER'));
-      if (userInfo != ''&&userInfo != undefined) {
-        //认证登录状态
-      }else {
-        this.$router.push({name: 'login'})
-      }
-      let nowdate = new Date();
-      if ((nowdate - userInfo.date) > userInfo.expire) {
-        localStorage.clear();
-        this.$router.push({name: 'login'})
-      }
     }
   }
 </script>
