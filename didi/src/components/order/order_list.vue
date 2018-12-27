@@ -4,9 +4,9 @@
       订单列表
     </div>
     <div class="order_body" v-model="order_list">
-      <p><span class="lab">订单号:</span><span>{{order_list.orderId}}</span></p>
+      <p><span class="lab">订单编号:</span><span>{{order_list.orderId}}</span></p>
       <p><span class="lab">预约时间:</span><span>{{order_list.orderTime}}</span></p>
-      <p><span class="lab">价格:</span><span>{{order_list.orderMoney}}</span></p>
+      <p><span class="lab">订单价格:</span><span>{{order_list.orderMoney}}</span></p>
       <p><span class="lab">预约地址:</span><span>{{agentAddress}}</span></p>
       <p><span class="lab">订单状态:</span><span>{{order_list.orderState}}</span></p>
     </div>
