@@ -21,7 +21,7 @@ Vue.use(VueResource);
 
 // 数据请求
 import Axios from 'axios'
-Axios.defaults.baseURL = 'http://47.93.254.11:8080';
+Axios.defaults.baseURL = 'http://jc.zonguo.cn:6060';
 // Axios.defaults.baseURL = '/api';
 Vue.prototype.$ajax = Axios;
 
