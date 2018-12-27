@@ -101,7 +101,7 @@
                   .then((res)=>{
                     console.log(res);
                     if (res.data.code == 200){
-                        
+
                     }
                   })
               }
@@ -131,10 +131,11 @@
 }
 /*定义上传*/
 .fileInput{
-  height: 100%;
+  width: 98%;
+  height: 160px;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 72px;
   opacity: 0;
 }
 </style>
