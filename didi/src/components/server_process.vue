@@ -42,7 +42,7 @@
         </div>
         <div class="bot_cell">
           <img src="../../static/images/liucheng.png" alt="">流程简便
-          <p>车检大师小程序一键下单，全程为您服务</p>
+          <p>车检大师一键下单，全程为您服务</p>
         </div>
         <div class="bot_cell">
           <img src="../../static/images/time.png" alt="">快速高效
